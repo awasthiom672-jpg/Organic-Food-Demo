@@ -1,0 +1,8 @@
+{
+  "name": "Zubair Organic Foods - Pure Desi Ghee & Artisanal Dairy",
+  "description": "100% Pure Desi Ghee crafted with traditional Bilona churning. Authentic aroma, grainy texture, lab-tested purity, and nationwide delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

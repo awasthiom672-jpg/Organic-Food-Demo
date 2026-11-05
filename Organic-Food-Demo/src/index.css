@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --brand-emerald-dark: #0f2f24;
+    --brand-emerald-light: #164233;
+    --brand-gold: #d4a359;
+    --brand-gold-light: #e8c882;
+    --brand-cream: #fbf9f4;
+    --brand-terracotta: #c85a32;
+    --brand-sage: #1d8354;
+    --dark-bg: #0b1a15;
+    --dark-surface: #12241e;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #1a2e26;
+    background-color: #fbf9f4;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  body.dark {
+    color: #f7f5ed;
+    background-color: #0b1a15;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Subtle, sleek modern tactile button (toned down from heavy 3D) */
+.btn-tactile {
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.btn-tactile:hover {
+  transform: translateY(-1px);
+}
+.btn-tactile:active {
+  transform: translateY(1px);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f4;
+}
+.dark ::-webkit-scrollbar-track {
+  background: #0b1a15;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a359;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b58844;
+}
+
+/* Continuous Left-to-Right Announcement Marquee */
+@keyframes marquee-to-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-right {
+  display: flex;
+  width: max-content;
+  animation: marquee-to-right 42s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-right:hover {
+  animation-play-state: paused;
+}
